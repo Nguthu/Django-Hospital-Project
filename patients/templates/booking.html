@@ -1,1 +1,12 @@
-{% extends "base.html" %} {% block title %}booking | hospital{% endblock %}
+{% extends "base.html" %} 
+
+{% load static %}
+
+{% block title %}
+booking | hospital
+{% endblock %}
+
+{% block content%}
+<img src="{% static 'images/ovariancancer1-doctor-9628974_1920.jpg' %}" alt="booking_image">
+<h2>Welcome to Tabibu Booking</h2>
+{% endblock%}

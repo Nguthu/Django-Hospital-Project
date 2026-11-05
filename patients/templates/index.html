@@ -1,9 +1,12 @@
-{% extends "base.html" %} {% block title %}home | hospital {% endblock %}
+{% extends "base.html" %}
+
+{% load static%}
+
+{% block title %}
+home | hospital 
+{% endblock %}
+
 {% block content %}
-<section class="hero">
-    <h1>Welcome to Hospital</h1>
-    <p>
-        Welcome to our hospital system. We treat, God heals
-    </p>
-</section>
+<img src="{% static 'images/darkostojanovic.jpg' %}" alt="home_image"> 
+<h2>Welcome to Tabibu</h2>
 {% endblock %}

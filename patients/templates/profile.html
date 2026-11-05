@@ -1,1 +1,12 @@
-{% extends "base.html" %} {% block title %}profile | hospital{% endblock %}
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+profile | hospital
+{% endblock %}
+
+{% block content%}
+<img src="{% static 'images/darkostojanovic.jpg'%}" alt="profile_image">
+<h2>Welcome to Tabibu Profile</h2>    
+{% endblock%}
