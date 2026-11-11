@@ -7,6 +7,22 @@ login | hospital
 {% endblock %}
 
 {% block content%}
-<img src="{% static 'images/darkostojanovic.jpg'%}" alt="login_image">
-<h2>Welcome to Tabibu Login</h2>
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>Welcome to Tabibu Login</h2>
+        <form method="post" class="auth-form">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        <p class="auth-switch">Don't have an account? <a href="{% url 'index' %}">Register here</a></p>
+    </div>
+</div>
 {% endblock%}
